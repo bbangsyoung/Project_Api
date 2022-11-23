@@ -1,1 +1,1 @@
-# Project_Api
+api 활용 및 학습용으로 진행중 - 네이버 api 테스트 중
