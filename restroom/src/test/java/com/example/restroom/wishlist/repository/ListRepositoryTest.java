@@ -38,6 +38,21 @@ public class ListRepositoryTest {
     }
 
     @Test
+    @DisplayName("update_업뎃")
+    public void updateTest() {
+        var wishListEntity = create();
+        var expected = wishListRepository.save(wishListEntity);
+
+        expected.setTitle("update test");
+        var saveEntity = wishListRepository.save(expected);
+
+        Assertions.assertEquals("update test", saveEntity.getTitle());
+        Assertions.assertEquals(1, wishListRepository.listAll().size());
+
+    }
+
+
+    @Test
     @DisplayName("findById_1개찾기")
     public void findByIdTest() {
         var wishListEntity = create();
