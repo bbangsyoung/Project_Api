@@ -2,6 +2,7 @@ package com.example.restroom.naver;
 
 import com.example.restroom.naver.dto.SearchImageReq;
 import com.example.restroom.naver.dto.SearchLocalReq;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,9 @@ public class NewClientTest {
         search.setQuery("한대역화장실");
 
         var result = naverClient.searchLocal(search);
+
         System.out.println(result);
+        Assertions.assertNotNull(result.getItems().stream().findFirst().get().getCategory());
 
     }
 
