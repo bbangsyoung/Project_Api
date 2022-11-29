@@ -6,3 +6,9 @@ naver:
   client:
     id: w2JlnaM_fqM4URK_1sI6
     secret: Etelbl9Kg1
+
+# swagger - spingfox PathPattern 호환이휴
+# Spring Boot 2.6, Springfox 3.0.0 에서의 해결 방법
+# ant path matcher로 변경
+spring.mvc.pathmatch.matching-strategy: ant-path-matcher
+# http://localhost:8080/swagger-ui/ 로 확인가능
