@@ -18,7 +18,7 @@ public class ListRepositoryTest {
         wishList.setTitle("타이트트트틀");
         wishList.setCategory("카테고리리릭");
         wishList.setAddress("내주소");
-        wishList.setReadAddress("도로주소");
+        wishList.setRoadAddress("도로주소");
         wishList.setImageLink("");
         wishList.setVisit(false);
         wishList.setVisitCount(0);
